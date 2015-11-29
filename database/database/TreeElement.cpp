@@ -2,7 +2,7 @@
 
 template <class Sort, class Object>
 TreeElement<Sort, Object>::TreeElement(Object* element, TreeElement<Sort, Object>* leftChild, TreeElement<Sort, Object>* rightChild) {
-	this->data = new list<Object>();
+	this->data = new list<Object*>();
 	this->data->push(element);
 	this->leftChild = leftChild;
 	this->rightChild = rightChild;
@@ -18,7 +18,7 @@ TreeElement<Sort, Object>::TreeElement() {
 	TreeElement(0, 0, 0);
 }
 template <class Sort, class Object>
-Object* TreeElement<Sort, Object>::getData() {
+list<Object>* TreeElement<Sort, Object>::getData() {
 	return this->data;
 }
 

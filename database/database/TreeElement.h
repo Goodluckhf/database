@@ -1,6 +1,6 @@
 #pragma once
 #include <list>
-
+#include "Student.h"
 using namespace std;
 
 template <class Sort, class Object>
@@ -8,13 +8,13 @@ class TreeElement {
 private:
 	TreeElement<Sort, Object>* leftChild;
 	TreeElement<Sort, Object>* rightChild;
-	list<Object>* dataList;
+	list<Object*>* dataList;
 
 public:
 	TreeElement(Object*, TreeElement<Sort, Object>*, TreeElement<Sort, Object>*);
 	TreeElement(Object*);
 	TreeElement();
-	Object* getData();
+	list<Object>* getData();
 	TreeElement<Sort, Object>* getLeftChild();
 	TreeElement<Sort, Object>* getRightChild();
 	void setData(Object* data);

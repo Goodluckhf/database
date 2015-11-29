@@ -24,6 +24,9 @@
     <ClInclude Include="TreeElement.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Student.cpp">
@@ -36,6 +39,9 @@
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="Исходный код.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>

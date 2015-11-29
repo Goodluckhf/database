@@ -41,3 +41,9 @@ void Student::setGroup(int group) {
 void Student::setPoints(float points) {
 	this->points = points;
 }
+
+static void Student::edit(Student* stud, Student* newFields) {
+	stud->setGroup(newFields->getGroup);
+	stud->setPoints(newFields->getPoints);
+	stud->setName(newFields->getName);
+}

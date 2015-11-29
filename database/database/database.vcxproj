@@ -11,11 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Database.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="TreeElement.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Database.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="TreeElement.cpp" />

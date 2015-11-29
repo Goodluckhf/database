@@ -1,40 +1,21 @@
-﻿Сборка начата 29.11.2015 1:33:52.
-     1>Проект "D:\gitProjects\database\database\database\database.vcxproj" в узле 2 (целевые объекты Rebuild).
+﻿Сборка начата 29.11.2015 14:58:32.
+     1>Проект "D:\gitProjects\database\database\database\database.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\visula studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Student.cpp Tree.cpp TreeElement.cpp "Исходный код.cpp"
-         Исходный код.cpp
-     1>d:\gitprojects\database\database\database\tree.h(9): error C2059: синтаксическая ошибка: <L_TYPE_raw>
-                 d:\gitprojects\database\database\database\tree.h(18): см. ссылку на создание экземпляров класса шаблон при компиляции "Tree<Sort,Object>"
-     1>d:\gitprojects\database\database\database\tree.h(9): error C2238: непредвиденные лексемы перед ";"
-     1>d:\gitprojects\database\database\database\исходный код.cpp(12): warning C4305: аргумент: усечение из "double" к "float"
-         TreeElement.cpp
+         D:\visula studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Tree.cpp "Исходный код.cpp"
          Tree.cpp
-     1>d:\gitprojects\database\database\database\tree.h(9): error C2059: синтаксическая ошибка: <L_TYPE_raw>
-                 d:\gitprojects\database\database\database\tree.h(18): см. ссылку на создание экземпляров класса шаблон при компиляции "Tree<Sort,Object>"
-     1>d:\gitprojects\database\database\database\tree.h(9): error C2238: непредвиденные лексемы перед ";"
-     1>d:\gitprojects\database\database\database\tree.cpp(4): error C2226: синтаксическая ошибка: непредвиденный тип "Sort"
-     1>d:\gitprojects\database\database\database\tree.cpp(9): error C2244: Tree<Sort,Object>::Tree: не удается сопоставить определение функции существующему объявлению
-                 d:\gitprojects\database\database\database\tree.h(12): см. объявление "Tree<Sort,Object>::Tree"
-                 определение
-                 'Tree<Sort,Object>::Tree(void)'
-                 существующие объявления
-                 'Tree<Sort,Object>::Tree(Sort (__cdecl *)(Object *))'
-     1>d:\gitprojects\database\database\database\tree.cpp(14): error C2143: синтаксическая ошибка: отсутствие ")" перед "*"
-     1>d:\gitprojects\database\database\database\tree.cpp(14): error C2143: синтаксическая ошибка: отсутствие "," перед "*"
-     1>d:\gitprojects\database\database\database\tree.cpp(14): error C2182: callback: недопустимое использование типа "void"
-     1>d:\gitprojects\database\database\database\tree.cpp(14): error C2059: синтаксическая ошибка: )
-     1>d:\gitprojects\database\database\database\tree.cpp(40): error C2091: функция возвращает функцию
-     1>d:\gitprojects\database\database\database\tree.cpp(40): error C2244: Tree<Sort,Object>::find: не удается сопоставить определение функции существующему объявлению
-                 d:\gitprojects\database\database\database\tree.h(16): см. объявление "Tree<Sort,Object>::find"
-                 определение
-                 'bool (__cdecl *Tree<Sort,Object>::find(Sort,int))(TreeElement<Sort,Object> *,std::string)'
-                 существующие объявления
-                 'bool Tree<Sort,Object>::find(Sort,void (__cdecl *)(TreeElement<Sort,Object> *,std::string))'
-     1>d:\gitprojects\database\database\database\tree.cpp(64): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
-         Student.cpp
          Создание кода...
-     1>Сборка проекта "D:\gitProjects\database\database\database\database.vcxproj" завершена (целевые объекты Rebuild) с ошибкой.
+         Компиляция...
+         Исходный код.cpp
+     1>d:\gitprojects\database\database\database\исходный код.cpp(13): warning C4305: аргумент: усечение из "double" к "float"
+         Создание кода...
+       Link:
+         D:\visula studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\gitProjects\database\database\Debug\database.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\gitProjects\database\database\Debug\database.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\gitProjects\database\database\Debug\database.lib" /MACHINE:X86 Debug\Student.obj
+         Debug\Tree.obj
+         Debug\TreeElement.obj
+         "Debug\Исходный код.obj"
+         database.vcxproj -> D:\gitProjects\database\database\Debug\database.exe
+     1>Сборка проекта "D:\gitProjects\database\database\database\database.vcxproj" завершена (целевые объекты Build).
 
-Ошибка сборки.
+Сборка успешно завершена.
 
-Затраченное время: 00:00:00.93
+Затраченное время: 00:00:01.10

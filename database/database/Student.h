@@ -20,6 +20,7 @@ public:
 	void setId(int id);
 	void setGroup(int group);
 	void setPoints(float points);
+	static void edit(Student*, Student*);
 };
 
 
