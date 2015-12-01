@@ -1,49 +1,37 @@
 #include "Database.h"
 
-Database::Database() {	
+/*template<class T_return, class T_param>
+bool Database<T_return, T_param>::createTable(string name) {
+	this->tableName = name;
+	return true;
+}
 
+template<class T_return, class T_param>
+T_return Database<T_return, T_param>::insert(T_param* object) {
+	return this->indexTree->add(object);
+}
 
+template<class T_return, class T_param>
+vector<T_param*>* Database<T_return, T_param>::select(T_return sort) {
+	return this->indexTree->findByIndex(sort);
+}
+
+template<class T_return, class T_param>
+bool Database<T_return, T_param>::update(T_return sort, T_param* object) {
+	return this->indexTree->edit(sort, object);
+}
+
+template<class T_return, class T_param>
+bool Database<T_return, T_param>::remove(T_return sort) {
+	return this->indexTree->remove(sort);
+}
+*/
+template<class T_return, class T_param>
+void Database<T_return, T_param>::showTable() {
 
 }
 
-Database* Database::instance = 0;
-
-Database* Database::getInstance() {
-	if (Database::instance == 0) {
-		Database::instance = new Database();
-	}
-	return Database::instance;
-}
-
-int Database::createIdIndex(Student* student) {
-	return student->getId();
-}
-
-string Database::createNameIndex(Student* student) {
-	return student->getName();
-}
-
-int Database::createGroupIndex(Student* student) {
-	return student->getGroup();
-}
-
-float Database::createPointIndex(Student* student) {
-	return student->getPoints();
-}
-
-bool Database::createTable(string name, vector<string> indexes) {
-	for (int i = 0; i < indexes.size(); i++) {
-		if (indexes[i] == "id") {
-
-		}
-	}
-}
-bool Database::createTable(string name) {
-
-}
-void Database::showTable() {
-
-}
-string Database::getTableName() {
+template<class T_return, class T_param>
+string Database<T_return, T_param>::getTableName() {
 	return this->tableName;
 }

@@ -1,8 +1,8 @@
 #include "TreeElement.h"
-
+/*
 template <class Sort, class Object>
 TreeElement<Sort, Object>::TreeElement(Object* element, TreeElement<Sort, Object>* leftChild, TreeElement<Sort, Object>* rightChild) {
-	this->data = new list<Object*>();
+	this->data = new vector<Object*>();
 	this->data->push(element);
 	this->leftChild = leftChild;
 	this->rightChild = rightChild;
@@ -18,7 +18,7 @@ TreeElement<Sort, Object>::TreeElement() {
 	TreeElement(0, 0, 0);
 }
 template <class Sort, class Object>
-list<Object>* TreeElement<Sort, Object>::getData() {
+vector<Object*>* TreeElement<Sort, Object>::getData() {
 	return this->data;
 }
 
@@ -56,3 +56,4 @@ template <class Sort, class Object>
 bool TreeElement<Sort, Object>::hasRight() {
 	return this->rightChild != 0;
 }
+*/

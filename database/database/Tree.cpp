@@ -1,10 +1,11 @@
 #include "Tree.h"
 
+/*
 template<class Sort, class Object>
-bool Tree<Sort, Object>::find(Sort index, void (*callback) (TreeElement<Sort, Object>*, bool, string)) {
+bool Tree<Sort, Object>::find(Sort index, function<void(TreeElement<Sort, Object>*, bool, string)> callback) {
 	this->current = this->top;
 	while(this->current != 0) {
-		if (this->getSortField(this->current->getData) > index) {
+		if (this->getSortField(this->current->getData()[0]) > index) {
 			if (this->current->hasRight()) {
 				this->current = this->current->getRightChild();
 			}
@@ -13,7 +14,7 @@ bool Tree<Sort, Object>::find(Sort index, void (*callback) (TreeElement<Sort, Ob
 				return false;
 			}
 		}
-		else if (this->getSortField(this->current->getData) < index){
+		else if (this->getSortField(this->current->getData()[0]) < index){
 			if (this->current->hasLeft()) {
 				this->current = this->current->getLeftChild();
 			}
@@ -52,10 +53,10 @@ Sort Tree<Sort, Object>::add(Object* element) {
 	}
 	return sortField;
 }
-
+*/
 template<class Sort, class Object>
 bool Tree<Sort, Object>::remove(Sort sortField) {
-	return this->find(sortField, [](treeElement, isExist, child) -> {
+	return this->find(sortField, [](TreeElement<Sort, Object>* treeElement, bool isExist, string child) -> void {
 		if (isExist) {
 			if (!treeElement->hasLeft() && !treeElement->hasRight()){
 				treeElement = 0;
@@ -67,7 +68,7 @@ bool Tree<Sort, Object>::remove(Sort sortField) {
 				treeElement = treeElement->getRightChild();
 			}
 			else {
-				TreeElement<Sort, Object> tempElem = treeElement->getRightChild();
+				TreeElement<Sort, Object>* tempElem = treeElement->getRightChild();
 				while (tempElem->hasRight()) {
 					tempElem = tempElem->getRightChild();
 				}
@@ -78,14 +79,14 @@ bool Tree<Sort, Object>::remove(Sort sortField) {
 }
 
 template<class Sort, class Object>
-bool Tree<Sort, Object>::edit(Sort sortField, Object newData) {
-	return this->find(sortField, [](treeElement, isExist, child) -> {
+bool Tree<Sort, Object>::edit(Sort sortField, Object* newData) {
+	return this->find(sortField, [&newData](TreeElement<Sort, Object>* treeElement, bool isExist, string child) -> void {
 		if (isExist) {
-			std::list<Object*>::iterator it = treeElement->getData->begin();
-			for (; it != treeElement->getData->end(); ++it)
+			for (int i = 0; i < treeElement->getData->size(); ++i)
 			{
-				Student::edit(it, newData);
+				Student::edit(treeElement->getData->at(i), newData);
 			}
 		}
 	});
 }
+

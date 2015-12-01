@@ -1,25 +1,23 @@
 #pragma once
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Student {
 private:
-	int id;
 	string lastName;
 	float points;
 	int group;
 public:
-	Student(int id, string lastName, int group, float points);
-	Student();
 	Student(string lastName, int group, float points);
-	int getId();
+	Student();
 	string getName();
 	float getPoints();
 	int getGroup();
 	void setName(string name);
-	void setId(int id);
 	void setGroup(int group);
 	void setPoints(float points);
+	void show();
 	static void edit(Student*, Student*);
 };
 
