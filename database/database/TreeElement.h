@@ -48,8 +48,13 @@ public:
 	}
 
 	
-	void setData(Object* data) {
-		this->data = data;
+	void setData(vector<Object*>* data) {
+		if (data == 0) {
+			this->data = new vector<Object*>();
+		}
+		else {
+			this->data = data;
+		}
 	}
 
 	

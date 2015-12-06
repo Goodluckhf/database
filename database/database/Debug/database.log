@@ -1,19 +1,54 @@
-﻿Сборка начата 06.12.2015 14:14:03.
+﻿Сборка начата 06.12.2015 16:26:25.
      1>Проект "D:\gitProjects\database\database\database\database.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\visula studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Database.cpp Tree.cpp "Исходный код.cpp"
-         Database.cpp
-         Создание кода...
-         Компиляция...
+         D:\visula studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "Исходный код.cpp"
          Исходный код.cpp
      1>d:\gitprojects\database\database\database\исходный код.cpp(19): warning C4305: аргумент: усечение из "double" к "float"
      1>d:\gitprojects\database\database\database\исходный код.cpp(20): warning C4305: аргумент: усечение из "double" к "float"
      1>d:\gitprojects\database\database\database\исходный код.cpp(21): warning C4305: аргумент: усечение из "double" к "float"
      1>d:\gitprojects\database\database\database\исходный код.cpp(22): warning C4305: аргумент: усечение из "double" к "float"
      1>d:\gitprojects\database\database\database\исходный код.cpp(23): warning C4305: аргумент: усечение из "double" к "float"
+     1>d:\gitprojects\database\database\database\исходный код.cpp(24): warning C4305: аргумент: усечение из "double" к "float"
+     1>d:\gitprojects\database\database\database\исходный код.cpp(28): warning C4018: <: несоответствие типов со знаком и без знака
+     1>d:\gitprojects\database\database\database\исходный код.cpp(32): warning C4305: аргумент: усечение из "double" к "float"
      1>d:\gitprojects\database\database\database\исходный код.cpp(34): warning C4018: <: несоответствие типов со знаком и без знака
-         Tree.cpp
-         Создание кода...
+     1>d:\gitprojects\database\database\database\tree.h(120): warning C4018: <: несоответствие типов со знаком и без знака
+                 d:\gitprojects\database\database\database\tree.h(107): при компиляции функции-члена "bool Tree<T_return,T_param>::edit(Sort,Object *)" класса шаблон
+                 with
+                 [
+                     T_return=int
+         ,            T_param=Student
+         ,            Sort=int
+         ,            Object=Student
+                 ]
+                 d:\gitprojects\database\database\database\database.h(30): см. ссылку на создание экземпляров функции шаблон при компиляции "bool Tree<T_return,T_param>::edit(Sort,Object *)"
+                 with
+                 [
+                     T_return=int
+         ,            T_param=Student
+         ,            Sort=int
+         ,            Object=Student
+                 ]
+                 d:\gitprojects\database\database\database\database.h(16): см. ссылку на создание экземпляров класса шаблон при компиляции "Tree<T_return,T_param>"
+                 with
+                 [
+                     T_return=int
+         ,            T_param=Student
+                 ]
+                 d:\gitprojects\database\database\database\database.h(15): при компиляции функции-члена "Database<int,Student>::Database(T_return (__cdecl *)(T_param *))" класса шаблон
+                 with
+                 [
+                     T_return=int
+         ,            T_param=Student
+                 ]
+                 d:\gitprojects\database\database\database\исходный код.cpp(15): см. ссылку на создание экземпляров функции шаблон при компиляции "Database<int,Student>::Database(T_return (__cdecl *)(T_param *))"
+                 with
+                 [
+                     T_return=int
+         ,            T_param=Student
+                 ]
+                 d:\gitprojects\database\database\database\исходный код.cpp(13): см. ссылку на создание экземпляров класса шаблон при компиляции "Database<int,Student>"
+     1>d:\gitprojects\database\database\database\tree.h(105): warning C4715: Tree<int,Student>::remove: значение возвращается не при всех путях выполнения
        Link:
          D:\visula studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\gitProjects\database\database\Debug\database.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\gitProjects\database\database\Debug\database.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\gitProjects\database\database\Debug\database.lib" /MACHINE:X86 Debug\Database.obj
          Debug\Student.obj
@@ -25,4 +60,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:01.38
+Затраченное время: 00:00:00.64

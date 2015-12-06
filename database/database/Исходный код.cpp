@@ -16,25 +16,32 @@ int main() {
 
 	students->createTable("students");
 
-	students->insert(new Student("Vasya", 1, 112.2));
+	students->insert(new Student("Jenya", 7, 3.2));
+	students->insert(new Student("Vasya", 3, 3.2));
 	students->insert(new Student("Nikita", 10, 11.2));
 	students->insert(new Student("Vasya", 1, 2.2));
-	students->insert(new Student("Vasya", 3, 3.2));
+	students->insert(new Student("Vasya", 1, 112.2));
 	students->insert(new Student("Vasya", 10, 4.2));
 
-	vector<Student*>* dbResult; //= students->select(1);
+	vector<Student*>* dbResult = students->select(7);
 	
-	//for (int i = 0; i < dbResult->size(); i++) {
-	//	dbResult->at(i)->show();
-	//}
-	cout << endl << endl;
-	students->remove(1);
-	dbResult = students->select(1);
-
 	for (int i = 0; i < dbResult->size(); i++) {
 		dbResult->at(i)->show();
 	}
+	cout << endl << endl;
+	students->update(7, new Student("lolka", 8, 5.1));
+	dbResult = students->select(8);
+	for (int i = 0; i < dbResult->size(); i++) {
+		dbResult->at(i)->show();
+	}
+	cout <<"найденно: "<< dbResult->size() << endl;
+	cout << endl << endl;
+	/*students->insert(new Student("Jenya", 7, 3.2));
+	dbResult = students->select(7);
 
+	for (int i = 0; i < dbResult->size(); i++) {
+		dbResult->at(i)->show();
+	}*/
 	system("pause");
 	return 0;
 }
