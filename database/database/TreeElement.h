@@ -11,36 +11,6 @@ private:
 	vector<Object*>* data;
 
 public:
-	/*
-	TreeElement(Object*, TreeElement<Sort, Object>*, TreeElement<Sort, Object>*);
-	TreeElement(Object*);
-	TreeElement();
-	vector<Object*>* getData();
-	TreeElement<Sort, Object>* getLeftChild();
-	TreeElement<Sort, Object>* getRightChild();
-	void setData(Object* data);
-	void setLeftChild(TreeElement<Sort, Object>* child);
-	void setRightChild(TreeElement<Sort, Object>* child);
-	bool hasLeft();
-	bool hasRight();
-	*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	TreeElement(Object* element, TreeElement<Sort, Object>* leftChild, TreeElement<Sort, Object>* rightChild) {
 		this->data = new vector<Object*>();
 		this->data->push_back(element);
@@ -48,12 +18,19 @@ public:
 		this->rightChild = rightChild;
 	}
 
+	TreeElement(vector<Object*>* element, TreeElement<Sort, Object>* leftChild, TreeElement<Sort, Object>* rightChild) {
+		//this->data = new vector<Object*>();
+		this->data = element;
+		this->leftChild = leftChild;
+		this->rightChild = rightChild;
+	}
+
 	TreeElement(Object* element) {
-		TreeElement(element, 0, 0);
+		self(element, 0, 0);
 	}
 
 	TreeElement() {
-		TreeElement(0, 0, 0);
+		self(0, 0, 0);
 	}
 	
 	vector<Object*>* getData() {

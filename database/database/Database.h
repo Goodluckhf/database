@@ -32,8 +32,9 @@ public:
 	bool remove(T_return sort) {
 		return this->indexTree->remove(sort);
 	}
-	void showTable();
-	string getTableName();
+	string getTableName() {
+		return this->tableName;
+	}
 
 
 };
